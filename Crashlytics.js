@@ -53,15 +53,15 @@ module.exports = {
     SMXCrashlytics.recordError(newError);
   },
 
-  logException: function (value:string) {
+  logException: function (value) {
     SMXCrashlytics.logException(value);
   },
 
-  log: function (message:string) {
+  log: function (message) {
     SMXCrashlytics.log(message);
   },
 
-  setUserEmail: function (email:string) {
+  setUserEmail: function (email) {
     SMXCrashlytics.setUserEmail(email);
   },
 
@@ -69,15 +69,15 @@ module.exports = {
     SMXCrashlytics.setUserIdentifier(userIdentifier);
   },
 
-  setUserName: function (userName:string) {
+  setUserName: function (userName) {
     SMXCrashlytics.setUserName(userName);
   },
 
-  setBool: function (key:string, value:boolean) {
+  setBool: function (key, value) {
     SMXCrashlytics.setBool(key, value);
   },
 
-  setNumber: function (key:string, value:number) {
+  setNumber: function (key, value) {
     // This is a hack but allows us to have a standard API for both platforms
     if (Platform.OS === 'android') {
       value = value + "";
@@ -85,11 +85,11 @@ module.exports = {
     SMXCrashlytics.setNumber(key, value);
   },
 
-  setString: function (key:string, value:string) {
+  setString: function (key, value) {
     SMXCrashlytics.setString(key, value);
   },
 
-  recordCustomExceptionName: function(name:string, reason:string, frameArray:Array<Object>) {
+  recordCustomExceptionName: function(name, reason, frameArray) {
     SMXCrashlytics.recordCustomExceptionName(name, reason, frameArray);
   }
 };
